@@ -2,6 +2,8 @@
 #include "Tortuga.h"
 
 Tortuga::Tortuga() {
+	coordenadas = vec3(10.0f, 0.0f, 0.0f);
+
 	//TRIANGLES
 	//Caparazon arriba
 	vertices.push_back({ vec4(-1.0f, 2.0f,-1.0f, 1.0f),vec4(1.0f, 1.0f, 1.0f, 1.0f) });
@@ -382,5 +384,10 @@ Tortuga::Tortuga() {
 	mapaUV.push_back(vec2(0.1f, 0.0f));
 	mapaUV.push_back(vec2(1.0f, 1.0f));
 	//
+	mover();
+}
 
+void Tortuga::mover() {
+	modelo = mat4(1.0f); //Matriz identidad
+	modelo = translate(modelo, coordenadas);
 }

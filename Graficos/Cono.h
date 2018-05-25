@@ -5,5 +5,6 @@
 class Cono : public Modelo {
 public:
 	Cono();
-
+	vec3 coordenadas;
+	void mover();
 };

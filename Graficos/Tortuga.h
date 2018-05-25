@@ -5,6 +5,7 @@
 
 class Tortuga : public Modelo {
 public:
+	vec3 coordenadas;
+	void mover();
 	Tortuga();
-
 };
