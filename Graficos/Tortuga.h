@@ -6,6 +6,10 @@
 class Tortuga : public Modelo {
 public:
 	vec3 coordenadas;
-	void mover();
+	float angulo;
+	float velocidad = 6.0f;
+	void mover(double tiempoDelta);
+	void rotar();
+	void escalar();
 	Tortuga();
 };

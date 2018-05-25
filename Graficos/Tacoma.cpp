@@ -3,8 +3,8 @@
 
 Tacoma::Tacoma() {
 	//Inicializar transformaciones
-	angulo = 0.0f;
 	coordenadas = vec3(12.0f, 0.0f, 0.0f);
+	angulo = 0.0f;
 	direccion = 1;
 
 	//QUADS

@@ -3,6 +3,7 @@
 
 Tortuga::Tortuga() {
 	coordenadas = vec3(10.0f, 0.0f, 0.0f);
+	angulo = 0.0f;
 
 	//TRIANGLES
 	//Caparazon arriba
@@ -384,10 +385,11 @@ Tortuga::Tortuga() {
 	mapaUV.push_back(vec2(0.1f, 0.0f));
 	mapaUV.push_back(vec2(1.0f, 1.0f));
 	//
-	mover();
 }
 
-void Tortuga::mover() {
+void Tortuga::mover(double tiempoDelta) {
 	modelo = mat4(1.0f); //Matriz identidad
 	modelo = translate(modelo, coordenadas);
+	modelo = rotate(modelo, angulo, vec3(0.0f, 1.0f, 0.0f));
+	modelo = scale(modelo, vec3(1.0f, 1.0f, 1.0f));
 }

@@ -2,6 +2,10 @@
 #include "Chasis.h"
 
 Chasis::Chasis() {
+	coordenadas = vec3(0.0f, 0.0f, 0.0f);
+	angulo = 0.0f;
+	direccion = 0;
+
 	//Parte central del carro
 	vertices.push_back({ vec4(-0.5f, 0.40f, -0.7f, 1.0f),vec4((float(rand() % 101)) / 100,(float(rand() % 101)) / 100,(float(rand() % 101)) / 100,1.0f) });
 	vertices.push_back({ vec4(0.5f, 0.40f, -0.7f, 1.0f),vec4((float(rand() % 101)) / 100,(float(rand() % 101)) / 100,(float(rand() % 101)) / 100,1.0f) });
@@ -129,4 +133,11 @@ Chasis::Chasis() {
 	mapaUV.push_back(vec2(0.0f, 1.0f));
 
 	//Aqui sigue el mapa UV
+}
+
+void Chasis::mover(double tiempoDelta) {
+	modelo = mat4(1.0f); //Matriz identidad
+	modelo = translate(modelo, coordenadas);
+	modelo = rotate(modelo, angulo, vec3(0.0f, 1.0f, 0.0f));
+	modelo = scale(modelo, vec3(1.0f, 1.0f, 1.0f));
 }

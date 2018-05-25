@@ -4,7 +4,10 @@
 
 class Cono : public Modelo {
 public:
-	Cono();
 	vec3 coordenadas;
+	float angulo;
 	void mover();
+	void rotar();
+	void escalar();
+	Cono();
 };

@@ -4,6 +4,10 @@
 
 class Tronco : public Modelo {
 public:
+	vec3 coordenadas;
+	float angulo;
+	void mover();
+	void rotar();
+	void escalar();
 	Tronco();
-
 };
