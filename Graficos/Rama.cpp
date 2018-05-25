@@ -42,7 +42,7 @@ Rama::Rama() {
 	mapaUV.push_back(vec2(1.0f, 1.0f));
 	mapaUV.push_back(vec2(0.0f, 1.0f));
 
-
+	mover();
 	//Aqui sigue el mapa UV
 }
 

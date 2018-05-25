@@ -69,7 +69,7 @@ Tronco::Tronco() {
 	mapaUV.push_back(vec2(0.0f, 1.0f));
 
 
-
+	mover();
 	//Aqui sigue el mapa UV
 }
 

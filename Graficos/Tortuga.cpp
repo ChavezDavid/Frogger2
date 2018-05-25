@@ -2,7 +2,7 @@
 #include "Tortuga.h"
 
 Tortuga::Tortuga() {
-	coordenadas = vec3(10.0f, 0.0f, 0.0f);
+	coordenadas = vec3(0.0f, 0.0f, 0.0f);
 	angulo = 0.0f;
 
 	//TRIANGLES
@@ -385,6 +385,7 @@ Tortuga::Tortuga() {
 	mapaUV.push_back(vec2(0.1f, 0.0f));
 	mapaUV.push_back(vec2(1.0f, 1.0f));
 	//
+	mover(1);
 }
 
 void Tortuga::mover(double tiempoDelta) {

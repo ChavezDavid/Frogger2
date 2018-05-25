@@ -1188,7 +1188,7 @@ Rana::Rana() {
 	//
 
 	
-
+	mover(1);
 	//Aqui sigue el mapa UV
 }
 
